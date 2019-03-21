@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/codebam/kanye-tg#readme",
   "dependencies": {
+    "node-fetch": "^2.3.0",
     "node-telegram-bot-api": "^0.30.0"
   }
 }
