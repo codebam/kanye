@@ -2,19 +2,20 @@ const Telegraf = require('telegraf');
 const fetch = require('node-fetch');
 const { token } = require('./token.js');
 
-const bot = new Telegraf(token);
-
-const sendToTelegram = (b, id, quote) => b.telegram.answerInlineQuery(id, [{
-  type: 'article',
-  id: 0,
-  title: 'Kanye says...',
+const constructWhatKanyeSays = quote => [{
+  description: quote,
+  id: '0',
   input_message_content: {
     message_text: quote,
   },
-  description: quote,
-}], {
-  cache_time: 0,
-});
+  title: 'Kanye says...',
+  type: 'article',
+}];
+
+const sendToTelegram = (b, id, quote) => b.telegram.answerInlineQuery(id,
+  constructWhatKanyeSays(quote), { cache_time: 0 });
+
+const bot = new Telegraf(token);
 
 bot.on('inline_query', ctx => fetch('https://api.kanye.rest')
   .then(resp => resp.json())
