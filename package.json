@@ -28,5 +28,10 @@
     "node-fetch": "^2.3.0",
     "node-telegram-bot-api": "^0.30.0",
     "telegraf": "^3.27.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
