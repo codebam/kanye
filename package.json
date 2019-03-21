@@ -2,9 +2,9 @@
   "name": "kanye-tg",
   "version": "1.0.0",
   "description": "Kanye West as a Telegram bot",
-  "main": "src/app.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "tsc && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,12 @@
   },
   "homepage": "https://github.com/codebam/kanye-tg#readme",
   "dependencies": {
+    "@types/node": "^11.11.4",
+    "@types/node-telegram-bot-api": "^0.30.4",
     "node-telegram-bot-api": "^0.30.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.4000"
   }
 }

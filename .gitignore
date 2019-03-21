@@ -1,4 +1,6 @@
 src/token.js
+dist/token.js
+dist/token.js.map
 
 # Logs
 logs
