@@ -22,6 +22,7 @@ const bot = new Telegraf(token);
 bot.on('inline_query', ctx => fetch('https://api.kanye.rest')
   .then(resp => resp.json())
   .then(json => json.quote)
-  .then(quote => sendToTelegram(bot, ctx.update.inline_query.id, quote)));
+  .then(quote => sendToTelegram(bot, ctx.update.inline_query.id, quote)))
+  .catch(console.log);
 
 bot.launch();
