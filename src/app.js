@@ -19,13 +19,9 @@ const sendToTelegram = (b, id, quote) => b.telegram.answerInlineQuery(id,
 
 const bot = new Telegraf(token);
 
-try {
-  bot.on('inline_query', ctx => fetch('https://api.kanye.rest')
-    .then(resp => resp.json())
-    .then(json => json.quote)
-    .then(quote => sendToTelegram(bot, ctx.update.inline_query.id, quote)));
-} catch (e) {
-  console.log(e)
-}
+bot.on('inline_query', ctx => fetch('https://api.kanye.rest')
+  .then(resp => resp.json())
+  .then(json => json.quote)
+  .then(quote => sendToTelegram(bot, ctx.update.inline_query.id, quote)));
 
 bot.launch();
