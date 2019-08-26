@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/codebam/kanye-tg#readme",
   "dependencies": {
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.0",
     "node-telegram-bot-api": "^0.30.0",
-    "telegraf": "^3.27.1"
+    "telegraf": "^3.32.0"
   },
   "devDependencies": {
-    "eslint": "^5.15.3",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
