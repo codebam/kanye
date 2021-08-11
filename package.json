@@ -2,6 +2,7 @@
   "name": "kanye-tg",
   "version": "1.0.0",
   "description": "Kanye West as a Telegram bot",
+  "type": "module",
   "main": "dist/app.js",
   "scripts": {
     "start": "tsc && node dist/app.js",
